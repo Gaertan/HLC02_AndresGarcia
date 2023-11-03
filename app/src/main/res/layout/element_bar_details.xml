@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TextViewCardBarNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_literal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewCardBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="nombre" />
+
+            <ImageView
+                android:id="@+id/imageViewCardBar"
+                android:layout_width="0dp"
+                android:layout_height="398dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonCardBarMapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:foregroundGravity="fill_horizontal|clip_horizontal|center_horizontal"
+                android:gravity="clip_horizontal|center_horizontal|fill_horizontal"
+                android:scrollHorizontally="false"
+                android:text="@string/maps_literal"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewCardBar"
+                app:layout_constraintStart_toStartOf="@+id/imageViewCardBar" />
+
+            <Button
+                android:id="@+id/buttonCardBarVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/buttonCardBarMapa"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="11dp"
+                android:foregroundGravity="fill_horizontal|clip_horizontal|center_horizontal"
+                android:gravity="clip_horizontal|center_horizontal|fill_horizontal"
+                android:scrollHorizontally="false"
+                android:text="@string/video_literal"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewCardBar"
+                app:layout_constraintEnd_toStartOf="@+id/buttonCardBarAudio"
+                app:layout_constraintTop_toTopOf="@+id/buttonCardBarMapa"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonCardBarLlamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/llamar_literal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonCardBarReserva"
+                app:layout_constraintHorizontal_bias="0.58"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewserviciosBarDetails"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/buttonCardBarAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/buttonCardBarVideo"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/buttonCardBarVideo"
+                android:foregroundGravity="fill_horizontal|clip_horizontal|center_horizontal"
+                android:gravity="clip_horizontal|center_horizontal|fill_horizontal"
+                android:layoutDirection="inherit"
+                android:scrollHorizontally="false"
+                android:text="@string/audio_descripcion_literal"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonCardBarMapa"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewCardBar" />
+
+            <Button
+                android:id="@+id/buttonCardBarReserva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reserva_literal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/buttonCardBarLlamar" />
+
+            <TextView
+                android:id="@+id/textViewServiciosBarDetailsTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/servicios_literal"
+                app:layout_constraintBottom_toTopOf="@+id/textViewserviciosBarDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+            <TextView
+                android:id="@+id/textViewserviciosBarDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="101dp"
+                android:text="@string/nombre_literal"
+                app:layout_constraintBottom_toBottomOf="@id/buttonCardBarReserva"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewServiciosBarDetailsTitulo" />
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="412dp"
+                android:layout_height="98dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewServiciosBarDetailsTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCardBarVideo"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="-1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/editTextTextMultiLineBarDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

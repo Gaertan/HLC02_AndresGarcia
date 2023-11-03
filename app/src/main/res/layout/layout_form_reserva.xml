@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textViewScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewNombreForm"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/nombre_literal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toTopOf="@+id/textViewApellidosForm"
+                app:layout_constraintEnd_toStartOf="@+id/editTextNombreForm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNombreForm"
+                android:layout_width="201dp"
+                android:layout_height="42dp"
+                android:hint="@string/nombre_literal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewNombreForm"
+                app:layout_constraintTop_toTopOf="@+id/textViewNombreForm" />
+
+            <TextView
+                android:id="@+id/textViewApellidosForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apellidos_literal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNombreForm"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewNombreForm"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNombreForm" />
+
+            <Button
+                android:id="@+id/ButtonFechaReservaForm"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/fecha_reserva_literal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNombreForm"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="162dp"
+                android:layout_height="65dp"
+                android:layout_marginEnd="39dp"
+                android:ems="10"
+                android:hint="@string/email_literal"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNombreForm"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewEmailForm"
+                app:layout_constraintTop_toBottomOf="@id/textViewEmailForm" />
+
+            <EditText
+                android:id="@+id/editTextDateForm"
+                android:layout_width="182dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="24dp"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="@+id/ButtonFechaReservaForm"
+                app:layout_constraintStart_toStartOf="@+id/ButtonFechaReservaForm"
+                app:layout_constraintTop_toBottomOf="@id/ButtonFechaReservaForm" />
+
+            <TextView
+                android:id="@+id/textViewEmailForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="@string/email_literal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNombreForm"
+                app:layout_constraintHorizontal_bias="0.107"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewApellidosForm" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMascotaForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="264dp"
+                android:layout_marginTop="72dp"
+                android:text="@string/mascota_q_literal"
+                app:layout_constraintStart_toEndOf="@+id/editTextTextEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/textViewApellidosForm" />
+
+            <EditText
+                android:id="@+id/editTextTimeForm"
+                android:layout_width="169dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="4dp"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/editTextDateForm"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMascotaForm"
+                app:layout_constraintTop_toTopOf="@+id/editTextDateForm" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextApellidosForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/apellidos_literal"
+                app:layout_constraintStart_toStartOf="@+id/editTextNombreForm"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNombreForm" />
+
+            <ScrollView
+                android:id="@+id/scrollView4"
+                android:layout_width="405dp"
+                android:layout_height="222dp"
+                android:background="@drawable/transparent_gradient_imagecard"
+                android:backgroundTint="@color/md_theme_dark_errorContainer"
+                android:backgroundTintMode="src_atop"
+                android:foregroundGravity="bottom"
+                android:scrollIndicators="right"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="outsideInset"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDateForm"
+                app:layout_constraintVertical_bias="0.289"
+                tools:layout_editor_absoluteX="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="@string/haga_scroll_literall" />
+
+                    <EditText
+                        android:id="@+id/editTextTextMultiLine"
+                        android:layout_width="312dp"
+                        android:layout_height="345dp"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/next" />
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textViewEnviando"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enviando_a_literal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

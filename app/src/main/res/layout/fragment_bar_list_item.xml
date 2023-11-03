@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/nombreBarList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/nombre_literal"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:rotationX="0"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/transparent_gradient_imagecard"
+            tools:srcCompat="@drawable/transparent_gradient_imagecard" />
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
